@@ -63,6 +63,7 @@
 
 ## 标准库函数
 - fmt
+- base64
 - os
 - flag
 - timer
