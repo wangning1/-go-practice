@@ -1,3 +1,4 @@
+// go module包管理项目通过go run main.go进行执行项目
 package main
 
 import (
