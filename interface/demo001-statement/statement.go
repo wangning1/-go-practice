@@ -1,7 +1,11 @@
 // 接口的声明
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	sqlite3 "github.com/mattn/go-sqlite3"
+)
 
 //实现接口的两个条件
 // 1.接口的类型与实现接口的类型方法格式一致
@@ -26,4 +30,6 @@ func (f *file) WriteData(data interface{}) error {
 func main() {
 	f := file{}
 	f.WriteData("hello")
+	libVersion, libVersionNumber, sourceId := sqlite3.Version()
+	fmt.Printf("libVersion:%v, libVersionNumber:%v,sourceId:%v", libVersion, libVersionNumber, sourceId)
 }
